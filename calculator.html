@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--<link rel="stylesheet" href="css/motors.css">-->
+<title>My JS Calculator</title>
+<script>
+
+let calculator={
+    sum(){
+        return this.a + this.b;
+    },
+    mul(){
+        return this.a * this.b;
+    },
+    sub(){
+        return this.a - this.b;
+    },
+    divide(){
+        return this.a/this.b;
+    },
+    read(){
+        act = +prompt("1-Add, 2-subtract, 3-multiply, 4-divide", 0)
+        this.a = +prompt('First Num', 0);
+        this.b = +prompt('Second Num', 0);
+
+        
+    }
+};
+calculator.read();
+if(act===1){
+    alert(calculator.sum());
+    }
+if(act===2){
+    alert(calculator.sub());
+}
+if(act===3){
+    alert(calculator.mul());
+}
+if(act===4){
+    alert(calculator.divide());
+}
+else{
+    alert("This is an invalid selection. Try again.")
+}
+</script>
+</head>
+<body>
+<h1>My calculator</h1>
+<h3>Refresh to try again!</h3>
+</body>
+</html>
